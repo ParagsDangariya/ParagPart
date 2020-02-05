@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/guest_nav_graph"
+    app:startDestination="@id/teamListFragment">
+
+    <fragment
+        android:id="@+id/teamListFragment"
+        android:name="com.example.paragpart.TeamListFragment"
+        android:label="fragment_team_list"
+        tools:layout="@layout/fragment_team_list" >
+        <action
+            android:id="@+id/action_teamListFragment_to_guestPlayerListFragment"
+            app:destination="@id/guestPlayerListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/countryListFragment"
+        android:name="com.example.paragpart.CountryListFragment"
+        android:label="fragment_country_list"
+        tools:layout="@layout/fragment_country_list" />
+    <fragment
+        android:id="@+id/guestLeagueListFragment"
+        android:name="com.example.paragpart.GuestLeagueListFragment"
+        android:label="fragment_guest_league_list"
+        tools:layout="@layout/fragment_guest_league_list" >
+        <action
+            android:id="@+id/action_guestLeagueListFragment_to_guestLeagueInsideTeamListFragment"
+            app:destination="@id/guestLeagueInsideTeamListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/guestLeagueInsideTeamListFragment"
+        android:name="com.example.paragpart.GuestLeagueInsideTeamListFragment"
+        android:label="fragment_guest_league_inside_team_list"
+        tools:layout="@layout/fragment_guest_league_inside_team_list" >
+        <action
+            android:id="@+id/action_guestLeagueInsideTeamListFragment_to_guestPlayerListFragment"
+            app:destination="@id/guestPlayerListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/guestPlayerListFragment"
+        android:name="com.example.paragpart.GuestPlayerListFragment"
+        android:label="fragment_guest_player_list"
+        tools:layout="@layout/fragment_guest_player_list" />
+    <fragment
+        android:id="@+id/guestMatchStatsFragment"
+        android:name="com.example.paragpart.GuestMatchStatsFragment"
+        android:label="fragment_guest_match_stats"
+        tools:layout="@layout/fragment_guest_match_stats" >
+        <action
+            android:id="@+id/action_guestMatchStatsFragment_to_guestMatchLineupsFragment"
+            app:destination="@id/guestMatchLineupsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/guestMatchLineupsFragment"
+        android:name="com.example.paragpart.GuestMatchLineupsFragment"
+        android:label="fragment_guest_match_lineups"
+        tools:layout="@layout/fragment_guest_match_lineups" >
+        <action
+            android:id="@+id/action_guestMatchLineupsFragment_to_guestMatchStatsFragment"
+            app:destination="@id/guestMatchStatsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/upcomingMatchFragment"
+        android:name="com.example.paragpart.UpcomingMatchFragment"
+        android:label="fragment_upcoming_match"
+        tools:layout="@layout/fragment_upcoming_match" />
+</navigation>
